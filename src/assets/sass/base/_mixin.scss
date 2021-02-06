@@ -1,0 +1,8 @@
+@mixin cs-menu {
+    color: red;
+    text-align: left;
+    text-shadow: 5px 5px 10px red,
+    2px 3px 8px blue;
+    border-bottom: 1px solid #fcd1d1;
+    margin-left: 20px;  
+}

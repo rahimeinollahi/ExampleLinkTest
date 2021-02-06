@@ -1,20 +1,81 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+
+//csharp
+const csHome =import('../views/CSharp/CsHome.vue')
+const CsHomContent =import('../views/CSharp/CsHomContent.vue')
+const CsBeginerContent =import('../views/CSharp/CsBeginerContent.vue')
+const CsNormalContetnt =import('../views/CSharp/CsNormalContetnt.vue')
+const CsAdvancedContent =import('../views/CSharp/CsAdvancedContent.vue')
+const CsRefrenceContetnt =import('../views/CSharp/CsRefrenceContetnt.vue')
+
+//java
+const JavaHome =import('../views/Java/JavaHome.vue')
+
+//js
+const JsHome =import('../views/JS/JsHome.vue')
+
+//vuejs
+const VuejsHome =import('../views/Vuejs/VuejsHome')
+
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'csHome',
+    component: csHome,
+    meta:{transition:"ts-csharp"},
+    children:[
+      {
+        path: '',
+        name: 'CsHomContent',
+        component: CsHomContent,
+        meta:{transition:'ts-cs'}
+      },
+      {
+        path: 'csbeginer',
+        name: 'CsBeginerContent',
+        component: CsBeginerContent,
+        meta:{transition:"anim-cshome"}
+      },
+      {
+        path: 'csnormal',
+        name: 'CsNormalContetnt',
+        component: CsNormalContetnt,
+        meta:{transition:"anim-cshome"}
+      },
+      {
+        path: 'csadvanced',
+        name: 'CsAdvancedContent',
+        component: CsAdvancedContent,
+        meta:{transition:"anim-cshome"}
+      },
+      {
+        path: 'csrefrence',
+        name: 'CsRefrenceContetnt',
+        component: CsRefrenceContetnt,
+        meta:{transition:"anim-cshome"}
+      },
+    ]
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/java',
+    name: 'JavaHome',
+    component: JavaHome,
+    meta:{transition:"ts-java"}
+  },
+  {
+    path: '/js',
+    name: 'JsHome',
+    component: JsHome,
+    meta:{transition:'ts-js'}
+  },
+  {
+    path: '/vuejs',
+    name: 'VuejsHome',
+    component: VuejsHome,
+    meta:{transition:'ts-vuejs'}
+  },
+  
 ]
 
 const router = createRouter({

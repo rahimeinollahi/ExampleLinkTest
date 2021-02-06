@@ -1,0 +1,41 @@
+.ts-vuejs-enter-active,
+.ts-vuejs-leave-active{
+  transition:  all 1s;
+}
+.ts-vuejs-enter-from,
+.ts-vuejs-leave-to{
+  opacity: 0;
+  // transform: translateX(50px);
+  transform: skew(100deg);
+  transform: translateY(150px)
+}
+//
+.ts-js-enter-active,
+.ts-js-leave-active{
+  transition:  all 1s;
+}
+.ts-js-enter-from,
+.ts-js-leave-to{
+  opacity: 0;
+  // transform: translateX(50px);
+  transform: skew(100deg);
+}
+//js
+.ts-java-enter-active,
+.ts-java-leave-active{
+  transition:  all 1s;
+}
+.ts-java-enter-from,
+.ts-java-leave-to{
+  opacity: 0;
+  transform: translateY(25px);
+}
+.ts-cs-enter-active,
+.ts-cs-leave-active{
+  transition:  all 1s;
+}
+.ts-cs-enter-from,
+.ts-cs-leave-to{
+  opacity: 0;
+  transform: translateY(25px);
+}
